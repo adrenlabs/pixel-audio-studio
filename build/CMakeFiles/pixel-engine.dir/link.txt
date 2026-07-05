@@ -1,0 +1,1 @@
+/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG -Xlinker --dependency-file=CMakeFiles/pixel-engine.dir/link.d "CMakeFiles/pixel-engine.dir/src/main.cpp.o" "CMakeFiles/pixel-engine.dir/src/FileScanner.cpp.o" "CMakeFiles/pixel-engine.dir/src/MetadataReader.cpp.o" -o pixel-engine  -ltag -lz
