@@ -1,3 +1,0 @@
-/data/data/com.termux/files/home/pixel-audio-studio-engine/build/CMakeFiles/pixel-engine.dir
-/data/data/com.termux/files/home/pixel-audio-studio-engine/build/CMakeFiles/edit_cache.dir
-/data/data/com.termux/files/home/pixel-audio-studio-engine/build/CMakeFiles/rebuild_cache.dir
