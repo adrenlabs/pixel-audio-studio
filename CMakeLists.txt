@@ -18,6 +18,10 @@ add_executable(pixel-engine
     src/PluginManager.cpp
     src/FFmpegPlugin.cpp
     src/WaveformPlugin.cpp
+    src/TimelineTrack.cpp
+    src/Timeline.cpp
+    src/Playhead.cpp
+    src/ClipEditor.cpp
 )
 
 find_package(PkgConfig REQUIRED)
