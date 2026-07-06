@@ -25,6 +25,7 @@ add_executable(pixel-engine
     src/MixerTrack.cpp
     src/MasterBus.cpp
     src/Project.cpp
+    src/ProjectSerializer.cpp
 )
 
 find_package(PkgConfig REQUIRED)

@@ -14,6 +14,8 @@
 #include "../include/ClipEditor.hpp"
 #include "../include/MixerTrack.hpp"
 #include "../include/MasterBus.hpp"
+#include "../include/Project.hpp"
+#include "../include/ProjectSerializer.hpp"
 
 int main() {
 
@@ -142,6 +144,27 @@ std::cout << "\n===== Master Bus =====\n";
 std::cout << "Master Volume : "
           << master.getVolume() * 100
           << "%\n";
+    
+    Project project;
+
+project.setName("My First Pixel Project");
+
+std::cout << "\n===== Project =====\n";
+
+std::cout << "Project Name : "
+          << project.getName()
+          << "\n";
+    
+    if (ProjectSerializer::save(
+        project,
+        "My First Pixel Project.pixelproj"))
+{
+    std::cout << "Project saved successfully!\n";
+}
+else
+{
+    std::cout << "Project save failed!\n";
+}
  
     TimelineClip clip;
 
