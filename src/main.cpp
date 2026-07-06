@@ -16,6 +16,7 @@
 #include "../include/MasterBus.hpp"
 #include "../include/Project.hpp"
 #include "../include/ProjectSerializer.hpp"
+#include "../include/ProjectSerializer.hpp"
 
 int main() {
 
@@ -144,7 +145,22 @@ std::cout << "\n===== Master Bus =====\n";
 std::cout << "Master Volume : "
           << master.getVolume() * 100
           << "%\n";
-    
+
+    Project loadedProject;
+
+if (ProjectSerializer::load(
+        loadedProject,
+        "My First Pixel Project.pixelproj"))
+{
+    std::cout << "\n===== Project Loaded =====\n";
+    std::cout << "Project Name : "
+              << loadedProject.getName()
+              << std::endl;
+}
+else
+{
+    std::cout << "Project load failed!\n";
+}
     Project project;
 
 project.setName("My First Pixel Project");
