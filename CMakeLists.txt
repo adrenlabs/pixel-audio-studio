@@ -11,13 +11,22 @@ add_executable(pixel-engine
     src/main.cpp
     src/FileScanner.cpp
     src/MetadataReader.cpp
+    src/Logger.cpp
+    src/FFmpegRunner.cpp
+    src/WavReader.cpp
+    src/AudioPlayer.cpp
+    src/PluginManager.cpp
+    src/FFmpegPlugin.cpp
+    src/WaveformPlugin.cpp
 )
 
 find_package(PkgConfig REQUIRED)
 
 pkg_check_modules(TAGLIB REQUIRED taglib)
 
-target_include_directories(pixel-engine PRIVATE ${TAGLIB_INCLUDE_DIRS})
+target_include_directories(pixel-engine PRIVATE
+    ${TAGLIB_INCLUDE_DIRS}
+)
 
 target_link_libraries(pixel-engine
     ${TAGLIB_LIBRARIES}
