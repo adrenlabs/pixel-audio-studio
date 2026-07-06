@@ -12,6 +12,8 @@
 #include "../include/Timeline.hpp"
 #include "../include/Playhead.hpp"
 #include "../include/ClipEditor.hpp"
+#include "../include/MixerTrack.hpp"
+#include "../include/MasterBus.hpp"
 
 int main() {
 
@@ -115,6 +117,32 @@ std::cout
     << playhead.getPosition()
     << " sec\n";
     
+    MixerTrack mixer;
+
+mixer.setVolume(0.75f);
+
+std::cout << "\n===== Mixer =====\n";
+
+std::cout << "Volume : "
+          << mixer.getVolume() * 100
+          << "%\n";
+
+mixer.mute(true);
+
+std::cout << "Muted  : "
+          << (mixer.isMuted() ? "Yes" : "No")
+          << "\n";
+    
+    MasterBus master;
+
+master.setVolume(0.90f);
+
+std::cout << "\n===== Master Bus =====\n";
+
+std::cout << "Master Volume : "
+          << master.getVolume() * 100
+          << "%\n";
+ 
     TimelineClip clip;
 
 clip.path = "voice.wav";

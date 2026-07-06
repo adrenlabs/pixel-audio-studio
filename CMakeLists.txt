@@ -22,6 +22,9 @@ add_executable(pixel-engine
     src/Timeline.cpp
     src/Playhead.cpp
     src/ClipEditor.cpp
+    src/MixerTrack.cpp
+    src/MasterBus.cpp
+    src/Project.cpp
 )
 
 find_package(PkgConfig REQUIRED)
