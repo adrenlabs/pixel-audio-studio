@@ -1,0 +1,1 @@
+- [Flutter Dart num-clamp pitfall](flutter-dart-clamp.md) — `.clamp()` returns `num` in Dart; always append `.toDouble()` or `.toInt()` when assigning to typed fields.

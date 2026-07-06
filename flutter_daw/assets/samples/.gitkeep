@@ -1,0 +1,3 @@
+# Audio sample files go here.
+# The app loads from SampleLibrary.builtinSamples — paths must match.
+# For development, copy any WAV samples here with the filenames listed in sample.dart.
